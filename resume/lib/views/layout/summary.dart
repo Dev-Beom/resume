@@ -50,5 +50,20 @@ class _SummaryState extends State<Summary> {
       ),
     );
   }
+
+  Widget buildSummary() {
+    double? width = screenSize?.width;
+    double? fontSize = width! * 0.010;
+    return Container(
+      child: Text(
+        "서버사이드의 기술에 관심이 많은 개발자 이영범입니다.",
+        style: TextStyle(
+          color: Colors.white30,
+          fontSize: fontSize,
+          fontWeight: FontWeight.normal,
+        ),
+      ),
+    );
+  }
   }
 }
