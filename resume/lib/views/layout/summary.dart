@@ -65,5 +65,38 @@ class _SummaryState extends State<Summary> {
       ),
     );
   }
+
+  Widget buildInfo() {
+    return Container(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          infoTitle("Address"),
+          infoContents("서울특별시 동작구"),
+          SizedBox(
+            height: 20,
+          ),
+          infoTitle("Phone"),
+          infoContents("010-5409-8847"),
+          SizedBox(
+            height: 20,
+          ),
+          infoTitle("Email"),
+          infoContents("youngbeom0908@gmail.com"),
+          SizedBox(
+            height: 20,
+          ),
+          infoTitle("Website"),
+          infoContents("lisoft.tistory.com"),
+          SizedBox(
+            height: 20,
+          ),
+          infoTitle("GitHub"),
+          infoContents("Dev-Beom"),
+        ],
+      ),
+    );
+  }
+
   }
 }
