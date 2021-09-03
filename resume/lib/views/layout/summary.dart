@@ -98,5 +98,29 @@ class _SummaryState extends State<Summary> {
     );
   }
 
+  Widget infoTitle(text) {
+    double? width = screenSize?.width;
+    double? fontSize = width! * 0.013;
+    return Text(
+      text.toString().toUpperCase(),
+      style: TextStyle(
+        color: Colors.green,
+        fontSize: fontSize,
+        fontWeight: FontWeight.normal,
+      ),
+    );
+  }
+
+  Widget infoContents(text) {
+    double? width = screenSize?.width;
+    double? fontSize = width! * 0.010;
+    return Text(
+      text,
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: fontSize,
+        fontWeight: FontWeight.normal,
+      ),
+    );
   }
 }
