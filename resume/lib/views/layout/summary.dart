@@ -13,6 +13,42 @@ class _SummaryState extends State<Summary> {
 
   @override
   Widget build(BuildContext context) {
+    screenSize = MediaQuery.of(context).size;
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Container(
+        width: MediaQuery.of(context).size.width * 0.3,
+        height: MediaQuery.of(context).size.width * 0.7,
+        decoration: BoxDecoration(
+          color: Color(0xff151515),
+          borderRadius: BorderRadius.circular(3),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(30.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              buildName(),
+              SizedBox(
+                height: 10,
+              ),
+              buildPosision(),
+              SizedBox(
+                height: 20,
+              ),
+              buildSummary(),
+              SizedBox(
+                height: 50,
+              ),
+              buildInfo(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
   Widget buildName() {
     double? width = screenSize?.width;
     double? fontSize = width! * 0.03;
