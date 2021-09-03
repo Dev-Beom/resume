@@ -31,5 +31,24 @@ class _SummaryState extends State<Summary> {
       ],
     );
   }
+
+  Widget buildPosision() {
+    double? width = screenSize?.width;
+    double? fontSize = width! * 0.015;
+    return Container(
+      color: Colors.green,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+        child: Text(
+          "Back-end Developer",
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: fontSize,
+            fontWeight: FontWeight.normal,
+          ),
+        ),
+      ),
+    );
+  }
   }
 }
